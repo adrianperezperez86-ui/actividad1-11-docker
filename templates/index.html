@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSecOps Showcase | Adrian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+  <main class="max-w-2xl w-full bg-slate-800/80 backdrop-blur border border-slate-700/60 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+    
+    <!-- Glow decorativo de fondo -->
+    <div class="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header con Estado -->
+    <header class="flex items-center justify-between pb-6 border-b border-slate-700">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/30">
+          <i class="fa-brands fa-docker"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight">Actividad 1.11 - DevSecOps</h1>
+          <p class="text-xs text-slate-400">Contenedor seguro en producción</p>
+        </div>
+      </div>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Puerto 8080 Activo
+      </span>
+    </header>
+
+    <!-- Saludo / Nombre del Alumno -->
+    <section class="py-6 text-center">
+      <p class="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-1">Desarrollador / Alumno</p>
+      <h2 class="text-4xl font-extrabold text-white tracking-tight">Adrian</h2>
+      <p class="text-slate-400 mt-2 text-sm">
+        API REST construida bajo el principio de mínimo privilegio y arquitectura Multi-Stage.
+      </p>
+    </section>
+
+    <!-- Panel de Métricas / Cumplimiento de Requisitos -->
+    <section class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
+      <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700/40">
+        <p class="text-[11px] text-slate-400">Usuario de Ejecución</p>
+        <p class="text-sm font-semibold text-emerald-400 flex items-center gap-1 mt-0.5">
+          <i class="fa-solid fa-user-shield text-xs"></i> Non-Root (UID 10001)
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700/40">
+        <p class="text-[11px] text-slate-400">Imagen Base</p>
+        <p class="text-sm font-semibold text-blue-400 flex items-center gap-1 mt-0.5">
+          <i class="fa-brands fa-python text-xs"></i> 3.11.9-slim
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700/40 col-span-2 sm:col-span-1">
+        <p class="text-[11px] text-slate-400">Construcción</p>
+        <p class="text-sm font-semibold text-purple-400 flex items-center gap-1 mt-0.5">
+          <i class="fa-solid fa-layer-group text-xs"></i> Multi-Stage Build
+        </p>
+      </div>
+    </section>
+
+    <!-- Endpoints de la API REST -->
+    <section class="mt-6 pt-4 border-t border-slate-700/80">
+      <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Endpoints REST disponibles</h3>
+      <div class="flex flex-col gap-2">
+        <a href="/api/info" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 hover:bg-slate-700/40 transition border border-slate-700/30 text-xs font-mono">
+          <span class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-bold">GET</span>
+            <span class="text-slate-200">/api/info</span>
+          </span>
+          <span class="text-slate-500 hover:text-slate-300 flex items-center gap-1">Ver JSON <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-6 pt-4 text-center text-xs text-slate-500 border-t border-slate-800">
+      Verificado con Trivy Scanner • Docker Engine DevSecOps
+    </footer>
+
+  </main>
+</body>
+</html>
